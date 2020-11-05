@@ -1,14 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.unicarioca.dist.models;
 
-/**
- *
- * @author jonas
- */
-public class AlunoModel {
+public class AlunoModel extends PessoaModel{
+    
+    private AvaliacaoModel provas;
+    
+    public AlunoModel(String nome, String matricula, String senha) {
+        super(nome, matricula, senha);
+    }
+    
+    public AvaliacaoModel getProvas() {
+        return provas;
+    }
+
+    public void setProvas(AvaliacaoModel provas) {
+        this.provas = provas;
+    }
+    
     
 }
