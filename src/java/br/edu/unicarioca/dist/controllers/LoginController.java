@@ -16,11 +16,11 @@ import javax.jws.WebParam;
 @WebService(serviceName = "LoginController")
 public class LoginController {
 
-    /**
-     * This is a sample web service operation
-     */
-    @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
+    private final String login="jonas";
+    private final String senha="123";
+    
+    @WebMethod(operationName = "login")
+    public boolean login(@WebParam(name = "login") String login,@WebParam(name = "senha") String senha) {
+        return this.login.equals(login)&&this.senha.equals(senha);
     }
 }
